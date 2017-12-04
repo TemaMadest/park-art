@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=0, width=device-width, minimal-ui, maximum-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../build/build.css">
+    <style>.loader{position:fixed;z-index:99999;background-color:white;width:100%;height:100%;top:0;left:0;text-align:center;-webkit-transition:1s cubic-bezier(.75, .1, 0, 1);transition:1s cubic-bezier(.75, .1, 0, 1)}.loader .wrap_loader{position:relative;top:50%;-webkit-transform:translateY(-50%);-ms-transform:translateY(-50%);transform:translateY(-50%);max-width:270px;width:auto;height:69px;margin:0 auto}.loader .wrap_loader .cube_loader{float:left;-webkit-transition-delay:.5s;transition-delay:.5s;-webkit-transition-duration:1.5s;transition-duration:1.5s;opacity:0;width:70px;height:70px;-webkit-transform-origin:center center;-ms-transform-origin:center center;transform-origin:center center;position:relative;display:block;box-sizing:border-box;-webkit-transform:perspective(200px) translate3d(0, 0, -35px) rotate3d(1, 0, 0, 0deg);transform:perspective(200px) translate3d(0, 0, -35px) rotate3d(1, 0, 0, 0deg);-webkit-transform-style:preserve-3d;transform-style:preserve-3d;-webkit-backface-visibility:hidden;backface-visibility:hidden}.loader .wrap_loader .cube_loader span{position:absolute;display:block;opacity:1;filter:alpha(opacity=100);height:100%;overflow:hidden;-webkit-backface-visibility:hidden;backface-visibility:hidden;width:100%;left:0;top:0}.loader .wrap_loader .cube_loader .gr_1{-webkit-transform:translate3d(0, 0, 35px);transform:translate3d(0, 0, 35px);background:url('../img/cube/11.png') no-repeat;background-size:100%}.loader .wrap_loader .cube_loader .gr_2{background:url('../img/cube/3.png') no-repeat;background-size:100%;-webkit-transform:translate3d(0, -35px, 0) rotate3d(1, 0, 0, 90deg);transform:translate3d(0, -35px, 0) rotate3d(1, 0, 0, 90deg);-webkit-transform-origin:50% 50%;-ms-transform-origin:50% 50%;transform-origin:50% 50%}.loader .wrap_loader .cube_loader .gr_3{background:url('../img/cube/4.png') no-repeat;background-size:100%;-webkit-transform:translate3d(0, 0, -35px) rotate3d(1, 0, 0, 180deg);transform:translate3d(0, 0, -35px) rotate3d(1, 0, 0, 180deg);-webkit-transform-origin:50% 50%;-ms-transform-origin:50% 50%;transform-origin:50% 50%}.loader .wrap_loader .cube_loader .gr_4{background:url('../img/cube/17.png') no-repeat;background-size:100%;-webkit-transform-origin:50% 50%;-ms-transform-origin:50% 50%;transform-origin:50% 50%;-webkit-transform:translate3d(0, 35px, 0) rotate3d(1, 0, 0, 270deg);transform:translate3d(0, 35px, 0) rotate3d(1, 0, 0, 270deg)}.loader .wrap_loader .cube_loader.visible{opacity:1}.loader .wrap_loader .logo_loader{float:left;display:block;height:70px;width:200px;-webkit-transition-duration:1.5s;transition-duration:1.5s;opacity:0;background:url('../img/logo_loader.png') no-repeat;background-size:100% 70px}.loader .wrap_loader .logo_loader.visible{opacity:1}</style>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;amp;sensor=false"></script>
+  </head>
+  <script>var main_page = true;</script>
+  <body class="main-page-id">
+    <div id="loader" class="loader">
+      <div class="wrap_loader">
+        <div id="cube_loader" class="cube_loader"><span class="gr_1"></span><span class="gr_2"></span><span class="gr_3"></span><span class="gr_4"></span></div>
+        <div id="logo_loader" class="logo_loader"></div>
+      </div>
+      <script type="text/javascript">function ended(){Cube.start(),isLoaded=!0,document.getElementById("loader").style.opacity="0",setTimeout(function(){document.getElementById("loader").style.display="none",document.getElementById("loader").remove()},500)}window.loader={ico:[],one:[],two:[],three:[],fore:[],five:[]};for(var path="/img/",i=1;25>=i;i++){var ico=new Image(225,225);ico.src=path+"cube/"+i+".png",loader.ico[i]=ico}if("undefined"!=typeof main_page)for(var i=1;162>=i;i++){var one=new Image(100,100);one.src=path+"slider/1/img_"+i+".jpg",loader.one[i]=one}var isLoaded=!1,coor=90;setTimeout(function(){isLoaded||document.getElementById("cube_loader").classList.add("visible")},1e3),setTimeout(function(){isLoaded||document.getElementById("logo_loader").classList.add("visible")},3e3);var rotate=setInterval(function(){isLoaded?clearInterval(rotate):(document.getElementById("cube_loader").style.transform="perspective(200px) translate3d(0, 0, -35px) rotate3d(1, 0, 0, "+coor+"deg)",coor+=90)},2e3);window.onload=function(){for(var e=setInterval(function(){void 0===Cube.start||(clearInterval(e),ended())},200),o="/img/",t=1;162>=t;t++)if("undefined"!=typeof main_page){var i=new Image(100,100),a=new Image(100,100),d=new Image(100,100),r=new Image(100,100);i.src=o+"slider/2/img_"+t+".jpg",a.src=o+"slider/3/img_"+t+".jpg",d.src=o+"slider/4/img_"+t+".jpg",r.src=o+"slider/5/img_"+t+".jpg",loader.two[t]=i,loader.three[t]=a,loader.fore[t]=d,loader.five[t]=r}};</script>
+    </div>
+    <header>
+      <div class="row">
+        <div class="col logo"><a href="/" class="l"><img src="../img/logo.png"></a><a id="menu" href="#" class="menu"><span></span><span>       </span></a></div>
+        <div class="col adress"><i class="mark-icon"></i>
+          <ul>
+            <li><a href="#contacts">ул. 2-я Посадская, д. 4</a></li>
+            <li><a href="#contacts">ул. Городская, д. 60а</a></li>
+          </ul>
+        </div>
+        <div class="col schedule"><i class="clock-icon"></i>
+          <ul>
+            <li>ПН-СБ с 10:00 до 19:00</li>
+            <li>ВС с 10:00 до 16:00</li>
+          </ul>
+        </div><a href="tel:74862490937" class="col phone"><small>+7 (4862)  </small> 49-09-37</a><a href="#" rel="nofollow" class="col btn-order"> <span>Заказать звонок</span></a>
+      </div>
+    </header>
+    <nav>
+      <ul>
+        <li><i class="flower-icon"></i><a href="#">Наши работы</a></li>
+        <li><i class="flower-icon"></i><a href="#">О компании</a></li>
+        <li><i class="feedback-icon"></i><a href="#">Отзывы</a></li>
+        <li><i class="price-icon"></i><a href="#">Цены</a></li>
+        <li><i class="info-icon"></i><a href="#">Инфомрация</a></li>
+        <li><i class="contacts-icon"></i><a href="#">Наши офисы</a></li>
+      </ul>
+    </nav>
+    <section class="h1">
+      <h1><span class="down">Благоустройство территории </span><br><span class="down">и ландшафтный дизайн в Орле</span></h1>
+      <div class="cubes"></div>
+    </section>
+    <section class="text-about">
+       
+      Дизайн-проект ландшафта, благоустройство и строительные работы<br>Подбор и посадка растений, системы автоматического полива,<br>уход за садом.<br>Устройство прудов, ручьев и иных водных объектов. <br>Фонари, беседки, скамьи, опоры под вьющиеся растения и многое другое
+    </section>
+    <section class="kind-of-works-main">
+      <h2 class="js-scroll-animate"><span>Все виды работ от начала до конца под ключ</span></h2>
+      <ul>
+        <li class="js-scroll-animate"><a href="#">
+            <div class="alph"></div>
+            <h3>Проектирование участка <br>и ландшафтное проектирование</h3><img src="../img/kind_of_works/photo_001.jpg">
+            <div class="text">Принцип восприятия непредвзято создает паллиативный интеллект, условно. Концепция ментально оспособляет закон внешнего мира. Сомнение раскладывает на элементы неоднозначный структурализм.   предыдущему, конфликт, в рамках сегодняшних воззрений, ясен не всем.</div></a></li>
+        <li class="js-scroll-animate"><a href="#">
+            <div class="alph"></div>
+            <h3>Проектирование участка <br>и ландшафтное проектирование</h3><img src="../img/kind_of_works/photo_001.jpg">
+            <div class="text">Принцип восприятия непредвзято создает паллиативный интеллект, условно. Концепция ментально оспособляет закон внешнего мира. Сомнение раскладывает на элементы неоднозначный структурализм.   предыдущему, конфликт, в рамках сегодняшних воззрений, ясен не всем.</div></a></li>
+        <li class="js-scroll-animate"><a href="#">
+            <div class="alph"></div>
+            <h3>Проектирование участка <br>и ландшафтное проектирование</h3><img src="../img/kind_of_works/photo_001.jpg">
+            <div class="text">Принцип восприятия непредвзято создает паллиативный интеллект, условно. Концепция ментально оспособляет закон внешнего мира. Сомнение раскладывает на элементы неоднозначный структурализм.   предыдущему, конфликт, в рамках сегодняшних воззрений, ясен не всем.</div></a></li>
+        <li class="js-scroll-animate"><a href="#">
+            <div class="alph"></div>
+            <h3>Проектирование участка <br>и ландшафтное проектирование</h3><img src="../img/kind_of_works/photo_001.jpg">
+            <div class="text">Принцип восприятия непредвзято создает паллиативный интеллект, условно. Концепция ментально оспособляет закон внешнего мира. Сомнение раскладывает на элементы неоднозначный структурализм.   предыдущему, конфликт, в рамках сегодняшних воззрений, ясен не всем.</div></a></li>
+        <li class="js-scroll-animate"><a href="#">
+            <div class="alph"></div>
+            <h3>Проектирование участка <br>и ландшафтное проектирование</h3><img src="../img/kind_of_works/photo_001.jpg">
+            <div class="text">Принцип восприятия непредвзято создает паллиативный интеллект, условно. Концепция ментально оспособляет закон внешнего мира. Сомнение раскладывает на элементы неоднозначный структурализм.   предыдущему, конфликт, в рамках сегодняшних воззрений, ясен не всем.</div></a></li>
+        <li class="js-scroll-animate"><a href="#">
+            <div class="alph"></div>
+            <h3>Проектирование участка <br>и ландшафтное проектирование</h3><img src="../img/kind_of_works/photo_001.jpg">
+            <div class="text">Принцип восприятия непредвзято создает паллиативный интеллект, условно. Концепция ментально оспособляет закон внешнего мира. Сомнение раскладывает на элементы неоднозначный структурализм.   предыдущему, конфликт, в рамках сегодняшних воззрений, ясен не всем.</div></a></li>
+        <li class="js-scroll-animate"><a href="#">
+            <div class="alph"></div>
+            <h3>Проектирование участка <br>и ландшафтное проектирование</h3><img src="../img/kind_of_works/photo_001.jpg">
+            <div class="text">Принцип восприятия непредвзято создает паллиативный интеллект, условно. Концепция ментально оспособляет закон внешнего мира. Сомнение раскладывает на элементы неоднозначный структурализм.   предыдущему, конфликт, в рамках сегодняшних воззрений, ясен не всем.</div></a></li>
+        <li class="js-scroll-animate"><a href="#">
+            <div class="alph"></div>
+            <h3>Проектирование участка <br>и ландшафтное проектирование</h3><img src="../img/kind_of_works/photo_001.jpg">
+            <div class="text">Принцип восприятия непредвзято создает паллиативный интеллект, условно. Концепция ментально оспособляет закон внешнего мира. Сомнение раскладывает на элементы неоднозначный структурализм.   предыдущему, конфликт, в рамках сегодняшних воззрений, ясен не всем.</div></a></li>
+      </ul>
+    </section>
+    <!--section.chema
+    h2.js-scroll-animate
+      span Текстово-схематичный блок
+    .row
+      .col.one
+        h3 Если часток пустой:
+        p Тут будет много текста почему нужно сделать так так и так и не вот так и так и почему (немного разбавим инфо-графикой, может иконки какие нибудь, Наташа скинет позже текст и тд)
+      .col.two
+        h3 Если Озеленению и прочей шляпе нужен уход:
+        p А тут будет много текста и картинок с иконками, что за чем следует и тд, если уже что-то на участке имеется, как правильно и тд провести работы (тексты и картинки наташа тоже позже сбросит)
+    .row
+      .col.one
+        h3 Если часток пустой:
+        p Тут будет много текста почему нужно сделать так так и так и не вот так и так и почему (немного разбавим инфо-графикой, может иконки какие нибудь, Наташа скинет позже текст и тд)
+        p Тут будет много текста почему нужно сделать так так и так и не вот так и так и почему (немного разбавим инфо-графикой, может иконки какие нибудь, Наташа скинет позже текст и тд)
+        p Тут будет много текста почему нужно сделать так так и так и не вот так и так и почему (немного разбавим инфо-графикой, может иконки какие нибудь, Наташа скинет позже текст и тд)
+      .col.two
+        h3 Если Озеленению и прочей шляпе нужен уход:
+        p А тут будет много текста и картинок с иконками, что за чем следует и тд, если уже что-то на участке имеется, как правильно и тд провести работы (тексты и картинки наташа тоже позже сбросит)
+        p А тут будет много текста и картинок с иконками, что за чем следует и тд, если уже что-то на участке имеется, как правильно и тд провести работы (тексты и картинки наташа тоже позже сбросит)
+        p А тут будет много текста и картинок с иконками, что за чем следует и тд, если уже что-то на участке имеется, как правильно и тд провести работы (тексты и картинки наташа тоже позже сбросит)
+    p.center
+      span(alt="Скрыть", data-bottom="Y").accordion Читать полностью
+    -->
+    <section class="chema">
+      <h2 class="js-scroll-animate"><span>Вы можете к нам обратиться в любом случае</span></h2>
+      <div class="you-can js-scroll-animate">
+        <div class="you-can__layout you-can__layout--image-1"><span class="sep-bg right-close"></span><span class="you-can__separator right-close">
+            <div class="arrows right-close">
+              <div class="arrows__arrow arrows__arrow--left right-close"></div>
+              <div class="arrows__arrow arrows__arrow--right right-close"></div>
+            </div></span>
+          <div class="wr">
+            <div class="you-can__bg"><img src="../img/youCan/one.jpg" class="you-can__bg-image you-can__bg-image--image-1"><img src="../img/youCan/one.png" class="you-can__bg-image you-can__bg-image--image-2">
+              <div class="you-can__content">
+                <div class="you-can__full-content">
+                  <div class="title">Если Вы только мечтаете о благоустроенном участке</div>
+                  <div class="text"> 
+                    <div class="col">
+                      <p>Вы&nbsp;стали счастливым обладателем собственного кусочка земли и&nbsp;на&nbsp;этой территории решили создать эксклюзивный ландшафт? Мы&nbsp;рекомендуем начать с&nbsp;проектирования. Именно хорошо продуманный ландшафтный план, в&nbsp;котором будет учтено не&nbsp;только местоположение будущих объектов, но&nbsp;и&nbsp;последовательность их&nbsp;исполнения&nbsp;&mdash; залог успеха любого проекта.</p>
+                      <p>Стоит понимать, что перед началом работ на&nbsp;участке в&nbsp;идеале нужно обладать знаниям об&nbsp;особенностях участка, а&nbsp;также о&nbsp;том, каким будет Ваш сад в&nbsp;финале, вплоть до&nbsp;месторасположения отдельного кустика и&nbsp;пролегания каждой трубы коммуникации. Исполнение работ в&nbsp;правильной последовательности помогает сэкономить много средств и&nbsp;времени, а&nbsp;также получить хорошо организованный, гармоничный участок. </p>
+                    </div>
+                    <div class="col">
+                      <p>Существует несколько степеней проработки проекта, комплектность проектной документации может быть различной в&nbsp;зависимости от&nbsp;конкретных условий, а&nbsp;также от&nbsp;пожеланий клиента. Документы, которые могут входить в&nbsp;состав ландшафтного проекта: </p>
+                      <ul>
+                        <li>генеральный план;</li>
+                        <li>дендроплан, ассортиментная ведомость;</li>
+                        <li>посадочный чертеж;</li>
+                        <li>разбивочный чертеж;</li>
+                        <li>план покрытий (отделка, мощения, декоративные отсыпки);</li>
+                        <li>план дренажной системы &mdash;&nbsp;план системы автоматического полива;</li>
+                      </ul>
+                    </div>
+                    <div class="col">
+                      <ul>
+                        <li>эскизы видовых точек, эскизы малых архитектурных форм Дополнительно могут быть разработаны: проект вертикальной планировки, схема освещения, проекты цветников, розариев, декоративных огородов, водных объектов и&nbsp;т.д., проекты малых архитектурных форм, &nbsp;смета на&nbsp;работы, план очередности выполнения различных работ.</li>
+                        <p>После утверждения проекта участка можно смело приступать к&nbsp;планировке участка на&nbsp;месте, земельным работам, прокладывать коммуникации. Далее&nbsp;&mdash; строить, бетонировать, мостить и&nbsp;отделывать. Ну&nbsp;и&nbsp;в&nbsp;финале&nbsp;&mdash; организовывать водные объекты, сажать деревья, кусты и&nbsp;разбивать цветники. </p>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="you-can__preview-content">
+                  <div class="title"> 
+                    <noindex><span>Если Вы только мечтаете </span><br><span>о благоустроенном участке</span></noindex>
+                  </div>
+                  <div class="text">
+                    <noindex>Вы&nbsp;стали счастливым обладателем собственного кусочка земли и&nbsp;на&nbsp;этой территории решили создать эксклюзивный ландшафт? Мы&nbsp;рекомендуем начать с&nbsp;проектирования. Именно хорошо продуманный ландшафтный план, в&nbsp;котором будет учтено не&nbsp;только местоположение будущих объектов, но&nbsp;и&nbsp;последовательность их&nbsp;исполнения&nbsp;&mdash; залог успеха любого проекта.</noindex>
+                  </div>
+                  <div class="view">Развернуть полностью</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="you-can__layout you-can__layout--image-2"><span class="sep-bg left-close"></span><span class="you-can__separator left-close">
+            <div class="arrows left-close">
+              <div class="arrows__arrow arrows__arrow--left left-close"></div>
+              <div class="arrows__arrow arrows__arrow--right left-close"></div>
+            </div></span>
+          <div class="wr">
+            <div class="you-can__bg"><img src="../img/youCan/two.jpg" class="you-can__bg-image you-can__bg-image--image-1"><img src="../img/youCan/two.png" class="you-can__bg-image you-can__bg-image--image-2">
+              <div class="you-can__content">
+                <div class="you-can__full-content">
+                  <div class="title">Если Ваш участок благоустроен</div>
+                  <div class="text"> 
+                    <div class="col">
+                      <p>Вы&nbsp;являетесь обладателем участка земли в&nbsp;Орле или Орловской области, на&nbsp;котором уже расположились сад, огород, зона отдыха и&nbsp;прочие милые сердцу объекты. Вы, несомненно уже привыкли и&nbsp;полюбили свой участок, но&nbsp;поняли, что для того, чтобы выглядеть великолепно, он&nbsp;нуждается в&nbsp;постоянном уходе. В&nbsp;этом случае Вам могут быть полезны следующие наши услуги:</p>
+                      <ul>
+                        <li>уход за&nbsp;садом, в&nbsp;который входит стрижка и&nbsp;обновление газонов, удобрение, полив, прополка, обрезка растений, пересадка и&nbsp;деление многолетников, подготовка растений к&nbsp;зиме, весенние работы в&nbsp;саду;</li>
+                      </ul>
+                    </div>
+                    <div class="col">
+                      <ul>
+                        <li>оформление цветников: проектирование, выращивание рассады, высадка однолетников, посадка и&nbsp;выкопка луковичных и&nbsp;т.&nbsp;д; </li>
+                        <li>организация контейнерного и&nbsp;иного вертикального озеленения;  </li>
+                        <li>сезонные и&nbsp;периодические уборки территории;</li>
+                      </ul>
+                      <p>Если же в какой-то момент Вам захотелось изменений на своем приусадебном участке, будь то сооружение беседки или организация пруда вместо поднадоевшей клумбы, наши специалисты готовы провести работы по направлениям:</p>
+                    </div>
+                    <div class="col">
+                      <ul>
+                        <li>доработка имеющихся посадок и объектов: составление проекта с опорой на имеющиеся условия, озеленение территорий, высадка и пересадка растений согласно проекту, устройство или доработка водных объектов, отделочные работы и мощение, сооружение спортивных и детских площадок, организация освещения и видеонаблюдения;</li>
+                        <li>проектирование, изготовление и установка качелей, беседок, мостиков и прочих малых архитектурных форм.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="you-can__preview-content">
+                  <div class="title"> 
+                    <noindex><span>Если Ваш участок </span><br><span>благоустроен</span></noindex>
+                  </div>
+                  <div class="text">
+                    <noindex>Вы&nbsp;являетесь обладателем участка земли в&nbsp;Орле или Орловской области, на&nbsp;котором уже расположились сад, огород, зона отдыха и&nbsp;прочие милые сердцу объекты. Вы, несомненно уже привыкли и&nbsp;полюбили свой участок, но&nbsp;поняли, что для того, чтобы выглядеть великолепно, он&nbsp;нуждается в&nbsp;постоянном уходе. В&nbsp;этом случае Вам могут быть полезны следующие наши услуги:</noindex>
+                  </div>
+                  <div class="view">Развернуть полностью</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="how-to">
+      <h2 class="js-scroll-animate"> <span>Как мы работаем</span></h2>
+      <div class="row">
+        <div class="col list">
+          <div class="ul-wrapper right">
+            <h3>Предзамер и проектировка</h3>
+            <ul>
+              <li><i class="mobile-icon"></i><span>Встерча или звонок</span></li>
+              <li><i class="linear-icon"></i><span>Предварительный замер</span></li>
+              <li><i class="calc-icon"></i><span>Рассчет стоимости проекта</span></li>
+              <li><i class="docs-icon"></i><span>Заключение догоовра на проекта</span></li>
+              <li><i class="paint-icon"></i><span>Отрисовка</span></li>
+              <li><i class="chema-icon"></i><span>Сдача проектных чертежей</span></li>
+              <li><i class="coins-icon"></i><span>Окончательный рассчёт</span></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col list">
+          <div class="ul-wrapper left">
+            <h3>Исполнение работ</h3>
+            <ul>
+              <li><i class="flower_2-icon"></i><span>Уточнительный замер по видам работ</span></li>
+              <li><i class="cutting-icon"></i><span>Рассчет стоимости работ</span></li>
+              <li><i class="bailer-icon"></i><span>Заключение договора и предоплата</span></li>
+              <li><i class="hose-icon"></i><span>Закупка материалов</span></li>
+              <li><i class="wave-icon"></i><span>Осуществление работ <br>специальными компаниями</span></li>
+              <li><i class="flower_3-icon"></i><span>Сдача результатов работ</span></li>
+              <li><i class="column-icon"></i><span>Окончательный рассчёт</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="last-project">
+      <h2 class="js-scroll-animate"><span>Недавние проекты</span></h2>
+      <ul>
+        <li><a href="#"><img src="../img/last_project/photo_001.jpg">
+            <h3>Наименование проекта</h3>
+            <p>Те, кому когда-либо приходилось делать в квартире ремонт, наверное, обращали внимание на старые газеты, наклеенные под обоями. Как правило, пока все статьи не перечитаешь</p></a></li>
+        <li><a href="#"><img src="../img/last_project/photo_001.jpg">
+            <h3>Наименование проекта</h3>
+            <p>Те, кому когда-либо приходилось делать в квартире ремонт, наверное, обращали внимание на старые газеты, наклеенные под обоями. Как правило, пока все статьи не перечитаешь</p></a></li>
+        <li><a href="#"><img src="../img/last_project/photo_001.jpg">
+            <h3>Наименование проекта</h3>
+            <p>Те, кому когда-либо приходилось делать в квартире ремонт, наверное, обращали внимание на старые газеты, наклеенные под обоями. Как правило, пока все статьи не перечитаешь</p></a></li>
+      </ul><a href="#" class="btn">Посмотреть все</a>
+    </section>
+    <section class="feedback-main">
+      <h2 class="js-scroll-animate"><span>Отзывы наших клиентов</span></h2>
+      <div class="row">
+        <div class="col one">
+          <h3>Василий Иванович Петушков</h3>
+          <p>Существуют две основные трактовки понятия «текст»: «имманентная» (расширенная, философски нагруженная) </p>
+          <p>и «репрезентативная» (более частная). Имманентный подход подразумевает отношение к тексту как к автономной реальности, нацеленность на выявление его внутренней </p>
+          <p>структуры. Репрезентативный — рассмотрение текста как особой формы представления знаний о внешней тексту действительности.</p><a href="#" class="btn">Читать все отзывы</a>
+        </div>
+        <div class="col two">
+          <div class="pic">
+            <div class="img"><img src="../img/feedback/photo_001.jpg">
+              <p>Досталось наследство от бабули</p>
+            </div>
+          </div>
+          <div class="pic">
+            <div class="img"><img src="../img/feedback/photo_002.jpg">
+              <p>Результат выполнения работ</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="text"><img src="../img/feedback/celi.jpg">
+        <p>Цель нашей работы — вместе с Вами создать ландшафт, который придаст участку особенную атмосферу, соответствующую именно Вашему представлению об идеальном саде и уюте. Мы приняли на себя обещание рационально учесть в работе максимум пожеланий клиентов, для того чтобы результат радовал и исполнителей, и заказчиков. Ваш участок станет таким, как Вы мечтаете — великолепным местом для отдыха с друзьями или для наслаждения одиночеством; он может быть «лесом» с обилием витиеватых тропинок или же раем для минималиста, быть отдушиной для современного «Мичурина» или же обиталищем любителя понежиться на берегу водоема — все, что бы Вы не пожелали, может обрести реальные черты.</p>
+        <p>Нам знакомы различные стили ландшафтного дизайна — от многовекового китайского стиля до современного постмодернизма. Различные работы, которые объединяются под единым названием — ландшафтный дизайн: устройство цветника, газона, альпийской горки, рутария, рокария, розария, декоративного огорода или сада пряных трав, посадка декоративных растений и крупномеров, укладка плитки, брусчатки, иное мощение, сооружение беседки, качелей, арок и прочих малых архитектурных форм, проектирование и прокладка дренажной системы или системы автоматического полива, устройство пруда или ручья, уходовые работы в саду — готовы для Вас провести специалисты нашей компании.</p>
+      </div>
+    </section>
+    <section class="contacts">
+      <h2 class="js-scroll-animate"><span>Наши контакты</span></h2>
+    </section>
+    <section id="contacts" class="contacts">
+      <div class="row">
+        <div class="col offices">
+          <div data-index="1" class="office active">
+            <h3>Оффис на 1 Посадской</h3><img src="../img/contacts/photo_001.jpg"><img src="../img/contacts/photo_002.jpg" class="mobile">
+            <p class="mobile">адресс такой то такой</p>
+            <p class="mobile">телефон такой то такой то</p>
+          </div>
+          <div data-index="2" class="office">
+            <h3>Оффис на Городской</h3><img src="../img/contacts/photo_003.jpg"><img src="../img/contacts/photo_004.jpg" class="mobile">
+            <p class="mobile">адресс такой то такой</p>
+            <p class="mobile">телефон такой то такой то</p>
+          </div>
+        </div>
+        <div class="col m">
+          <div id="map" class="map"></div>
+          <div id="a1" class="info">адресс 1 такой то такой то<br> телефон такой то такой то</div>
+          <div id="a2" class="info">адресс 2 такой то такой то<br> телефон такой то такой то</div>
+        </div>
+      </div>
+    </section>
+    <section class="about-text-main">
+      <h2 class="js-scroll-animate"><span>Малые архитектурные формы - эскиз месяца</span></h2>
+      <div class="row">
+        <div class="col"><img src="../img/last_project/kacheli.jpg">
+          <div class="price">Цена: <span>250 тыс. руб.</span></div>
+          <h3>
+            <p>Ажурные кованые качели с деревянным сиденьем</p>
+          </h3>
+          <p class="description">Декорированы лозой и&nbsp;розами ручной работы. Нетривиальный вариант, который привлекает внимание, прекрасная фотозона для любого торжества.</p>
+        </div>
+        <div class="col"><img src="../img/last_project/derevyannaya-pergola.jpg">
+          <div class="price">Цена: <span>35 тыс. руб.</span></div>
+          <h3>
+            <p>Деревянная пергола</p>
+          </h3>
+          <p class="description">Воздушная пергола из&nbsp;дуба. Имеет систему шпалер для вертикального озеленения вьющимися растениями. Оборудована скамьей со&nbsp;спинкой для уютного отдыха в&nbsp;саду. </p>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="ft-line">
+        <p>Ландшафтный дизайн в Орле</p><small>Озелените ваш участок!	</small>
+      </div>
+      <div class="grid">
+        <div class="adres">
+          <div class="gr">		
+            <div class="gr1">
+              <p>Ландшафтный дизайн 2015 в Орле</p>
+              <p>Наш телефон: +7 (4862) 49-09-37</p>
+              <p>e-mail: park-art@landscape.com</p>
+            </div>
+            <div class="gr2">
+              <p>Офис в центре города:</p>
+              <p>адрес: ул.2-я Посадская, д.4</p>
+              <p>График работы: ПН-СБ с 10:00 до 19:00<br>ВС c 10:00 до 16:00</p><a href="#contacts" title="Посмотретб на карте" data-index="1" class="ups posadskaya">Посмотреть на карте</a>
+            </div>
+          </div>
+          <div class="gr gr3">
+            <p>Офис в заводском районе:</p>
+            <p>адрес: ул.Городская, д.60а</p>
+            <p>График работы: ПН-СБ с 10:00 до 19:00<br>ВС c 10:00 до 16:00</p><a href="#contacts" title="Посмотретб на карте" data-index="2" class="ups gorodskaya">Посмотреть на карте</a>
+          </div>
+          <div class="clear-fix">       </div>
+        </div>
+        <div class="social">
+          <div class="vk"><a href="/">vk</a></div>
+          <div class="f"><a href="/">f</a></div>
+          <div class="ok"><a href="/">ok</a></div>
+        </div>
+      </div>
+      <div class="bt-line">
+        <ul>
+          <li> <a href="/">Галерея </a></li>
+          <li> <a href="/">Контакты</a></li>
+          <li> <a href="/">Отзывы	</a></li>
+          <li> <a href="/">Информация</a></li>
+          <li> <a href="/">О компании</a></li>
+          <li> <a href="/">Наши работы		</a></li>
+        </ul>
+      </div>
+    </footer>
+    <script src="../build/build.js"> </script>
+    <script>Maps.init();</script>
+    <div class="modal-overlay"></div>
+    <div class="modal view">
+      <div class="inner">
+        <div class="title"><span>Заказать звонок</span></div>
+        <p>Вы можете заказать обратный звонок. Укажите, пожалуйста, с каким сотрудником офиса или производства Вы хотели бы переговорить и он позвонит Вам в течение 24 часов!</p>
+        <div class="inputs">
+          <form method="post" action="">
+            <div class="names form-group">
+              <div class="control">
+                <input type="text" name="recipient-name" id="af_recipient-name" placeholder="Ваше Имя"><span class="error_recipient-name"></span>
+              </div>
+            </div>
+            <div class="telephone form-group">
+              <div class="control">
+                <input type="text" name="recipient-telephone" id="af_recipient-telephone" placeholder="Ваш Телефон">
+              </div>
+            </div>
+            <div class="email form-group">
+              <div class="control">
+                <input type="text" name="recipient-email" id="af_recipient-email" placeholder="Ваш email">
+              </div>
+            </div>
+            <div class="comment">
+              <div class="control">
+                <textarea id="af_recipient-comment" name="recipient-comment" placeholder="Ваш комментарий"></textarea>
+              </div>
+            </div>
+            <input type="submit" value="Заказать звонок">
+          </form>
+        </div><a href="#" onclick="$('.modal').fadeOut(200).removeClass('fade'); $('.modal-overlay').fadeOut(200).removeClass('fade');return false;" class="close-modal">×</a>
+      </div>
+    </div>
+  </body>
+</html>

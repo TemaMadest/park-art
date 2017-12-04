@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=0, width=device-width, minimal-ui, maximum-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../build/build.css">
+    <style>.loader{position:fixed;z-index:99999;background-color:white;width:100%;height:100%;top:0;left:0;text-align:center;-webkit-transition:1s cubic-bezier(.75, .1, 0, 1);transition:1s cubic-bezier(.75, .1, 0, 1)}.loader .wrap_loader{position:relative;top:50%;-webkit-transform:translateY(-50%);-ms-transform:translateY(-50%);transform:translateY(-50%);max-width:270px;width:auto;height:69px;margin:0 auto}.loader .wrap_loader .cube_loader{float:left;-webkit-transition-delay:.5s;transition-delay:.5s;-webkit-transition-duration:1.5s;transition-duration:1.5s;opacity:0;width:70px;height:70px;-webkit-transform-origin:center center;-ms-transform-origin:center center;transform-origin:center center;position:relative;display:block;box-sizing:border-box;-webkit-transform:perspective(200px) translate3d(0, 0, -35px) rotate3d(1, 0, 0, 0deg);transform:perspective(200px) translate3d(0, 0, -35px) rotate3d(1, 0, 0, 0deg);-webkit-transform-style:preserve-3d;transform-style:preserve-3d;-webkit-backface-visibility:hidden;backface-visibility:hidden}.loader .wrap_loader .cube_loader span{position:absolute;display:block;opacity:1;filter:alpha(opacity=100);height:100%;overflow:hidden;-webkit-backface-visibility:hidden;backface-visibility:hidden;width:100%;left:0;top:0}.loader .wrap_loader .cube_loader .gr_1{-webkit-transform:translate3d(0, 0, 35px);transform:translate3d(0, 0, 35px);background:url('../img/cube/11.png') no-repeat;background-size:100%}.loader .wrap_loader .cube_loader .gr_2{background:url('../img/cube/3.png') no-repeat;background-size:100%;-webkit-transform:translate3d(0, -35px, 0) rotate3d(1, 0, 0, 90deg);transform:translate3d(0, -35px, 0) rotate3d(1, 0, 0, 90deg);-webkit-transform-origin:50% 50%;-ms-transform-origin:50% 50%;transform-origin:50% 50%}.loader .wrap_loader .cube_loader .gr_3{background:url('../img/cube/4.png') no-repeat;background-size:100%;-webkit-transform:translate3d(0, 0, -35px) rotate3d(1, 0, 0, 180deg);transform:translate3d(0, 0, -35px) rotate3d(1, 0, 0, 180deg);-webkit-transform-origin:50% 50%;-ms-transform-origin:50% 50%;transform-origin:50% 50%}.loader .wrap_loader .cube_loader .gr_4{background:url('../img/cube/17.png') no-repeat;background-size:100%;-webkit-transform-origin:50% 50%;-ms-transform-origin:50% 50%;transform-origin:50% 50%;-webkit-transform:translate3d(0, 35px, 0) rotate3d(1, 0, 0, 270deg);transform:translate3d(0, 35px, 0) rotate3d(1, 0, 0, 270deg)}.loader .wrap_loader .cube_loader.visible{opacity:1}.loader .wrap_loader .logo_loader{float:left;display:block;height:70px;width:200px;-webkit-transition-duration:1.5s;transition-duration:1.5s;opacity:0;background:url('../img/logo_loader.png') no-repeat;background-size:100% 70px}.loader .wrap_loader .logo_loader.visible{opacity:1}</style>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;amp;sensor=false"></script>
+  </head>
+  <body>
+    <div id="loader" class="loader">
+      <div class="wrap_loader">
+        <div id="cube_loader" class="cube_loader"><span class="gr_1"></span><span class="gr_2"></span><span class="gr_3"></span><span class="gr_4"></span></div>
+        <div id="logo_loader" class="logo_loader"></div>
+      </div>
+      <script type="text/javascript">function ended(){Cube.start(),isLoaded=!0,document.getElementById("loader").style.opacity="0",setTimeout(function(){document.getElementById("loader").style.display="none",document.getElementById("loader").remove()},500)}window.loader={ico:[],one:[],two:[],three:[],fore:[],five:[]};for(var path="/img/",i=1;25>=i;i++){var ico=new Image(225,225);ico.src=path+"cube/"+i+".png",loader.ico[i]=ico}if("undefined"!=typeof main_page)for(var i=1;162>=i;i++){var one=new Image(100,100);one.src=path+"slider/1/img_"+i+".jpg",loader.one[i]=one}var isLoaded=!1,coor=90;setTimeout(function(){isLoaded||document.getElementById("cube_loader").classList.add("visible")},1e3),setTimeout(function(){isLoaded||document.getElementById("logo_loader").classList.add("visible")},3e3);var rotate=setInterval(function(){isLoaded?clearInterval(rotate):(document.getElementById("cube_loader").style.transform="perspective(200px) translate3d(0, 0, -35px) rotate3d(1, 0, 0, "+coor+"deg)",coor+=90)},2e3);window.onload=function(){for(var e=setInterval(function(){void 0===Cube.start||(clearInterval(e),ended())},200),o="/img/",t=1;162>=t;t++)if("undefined"!=typeof main_page){var i=new Image(100,100),a=new Image(100,100),d=new Image(100,100),r=new Image(100,100);i.src=o+"slider/2/img_"+t+".jpg",a.src=o+"slider/3/img_"+t+".jpg",d.src=o+"slider/4/img_"+t+".jpg",r.src=o+"slider/5/img_"+t+".jpg",loader.two[t]=i,loader.three[t]=a,loader.fore[t]=d,loader.five[t]=r}};</script>
+    </div>
+    <header>
+      <div class="row">
+        <div class="col logo"><a href="/" class="l"><img src="../img/logo.png"></a><a id="menu" href="#" class="menu"><span></span><span>       </span></a></div>
+        <div class="col adress"><i class="mark-icon"></i>
+          <ul>
+            <!--li: a(href="#contacts") ул. 2-я Посадская, д. 4-->
+            <li><a href="#contacts">ул. Городская, д. 60а</a></li>
+          </ul>
+        </div>
+        <div class="col schedule"><i class="clock-icon"></i>
+          <ul>
+            <li>ПН-СБ с 10:00 до 19:00</li>
+            <li>ВС с 10:00 до 16:00</li>
+          </ul>
+        </div><a href="tel:74862490937" class="col phone"><small>+7 (4862)  </small> 49-09-37</a><a href="#" rel="nofollow" class="col btn-order"> <span>Заказать звонок</span></a>
+      </div>
+    </header>
+    <nav>
+      <ul>
+        <li><i class="flower-icon"></i><a href="#">Наши работы</a></li>
+        <li><i class="flower-icon"></i><a href="#">О компании</a></li>
+        <li><i class="feedback-icon"></i><a href="#">Отзывы</a></li>
+        <li><i class="price-icon"></i><a href="#">Цены</a></li>
+        <li><i class="info-icon"></i><a href="#">Инфомрация</a></li>
+        <li><i class="contacts-icon"></i><a href="#">Наши офисы</a></li>
+      </ul>
+    </nav>
+    <section class="h1">
+      <h1><span class="down">Цены</span></h1>
+      <div class="cubes"></div>
+    </section>
+    <section class="price">
+      <table>
+        <tr class="cp">
+          <td>П/п</td>
+          <td>Наименование работ</td>
+          <td>Единица измерения</td>
+          <td>Стоимость, руб.*</td>
+        </tr>
+        <tr class="title cp">
+          <td></td>
+          <td>Раздел Проектные работы</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>Разработка генерального плана участка с элементами дендроплана**</td>
+          <td>м2</td>
+          <td>500-800</td>
+        </tr>
+        <tr class="title cp">
+          <td></td>
+          <td>Раздел Благоустройство территории</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr class="title2 cp">
+          <td></td>
+          <td>Земельные работы</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>Работы по планировке участка</td>
+          <td>100 м2</td>
+          <td>3 350</td>
+        </tr>
+        <tr class="title2 cp">
+          <td></td>
+          <td>Устройство дорожек и площадок</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>Укладка плитки (брусчатки) под ключ</td>
+          <td>м2</td>
+          <td>1 660 + плитка (брусчатка)</td>
+        </tr>
+      </table><span class="description">Примечание: *Все цены ориентировочные. Уточняются после анкетирования клиента и выезда специалист на участок. *** Стоимость проектирования рассчитывается от общей площади участка, включая строения. </span>
+    </section>
+    <footer>
+      <div class="ft-line">
+        <p>Ландшафтный дизайн в Орле</p><small>Озелените ваш участок!	</small>
+      </div>
+      <div class="grid">
+        <div class="adres">
+          <div class="gr">		
+            <div class="gr1">
+              <p>г. Орел, ул. Городская, д. 60а</p>
+              <p>Наш телефон: +7 (4862) 49-09-37</p>
+              <p>e-mail: park-art@landscape.com</p>
+            </div>
+            <!--.gr2
+            p Офис в центре города:
+            p адрес: ул.2-я Посадская, д.4
+            p График работы: ПН-СБ с 10:00 до 19:00<br>ВС c 10:00 до 16:00
+            a(href='#contacts', title='Посмотретб на карте', class='ups posadskaya', data-index='1') Посмотреть на карте
+            -->
+          </div>
+          <!--.gr.gr3
+          p Офис в заводском районе:
+          p адрес: ул.Городская, д.60а
+          p График работы: ПН-СБ с 10:00 до 19:00<br>ВС c 10:00 до 16:00
+          a(href='#contacts', title='Посмотретб на карте', class='ups gorodskaya', data-index='2') Посмотреть на карте
+          -->
+          <div class="clear-fix">       </div>
+        </div>
+        <div class="social">
+          <div class="vk"><a href="/">vk</a></div>
+          <div class="f"><a href="/">f</a></div>
+          <div class="ok"><a href="/">ok</a></div>
+        </div>
+      </div>
+      <!--.bt-line
+      ul
+        li 
+          a(href='/') Галерея 
+        li 
+          a(href='/') Контакты
+        li 
+          a(href='/') Отзывы	
+        li 
+          a(href='/') Информация
+        li 
+          a(href='/') О компании
+        li 
+          a(href='/') Наши работы		
+      -->
+    </footer>
+    <script src="../build/build.js"> </script>
+    <script>Maps.init();</script>
+  </body>
+</html>

@@ -1,0 +1,55 @@
+include commons/doctype.jade
+html
+  include commons/head.jade
+  body
+    include commons/loader.jade	
+    include commons/header.jade
+    include commons/nav.jade
+    section.h1
+      h1
+        span.down Цены
+      .cubes
+    section.price
+      table
+        tr.cp
+          td П/п
+          td Наименование работ
+          td Единица измерения
+          td Стоимость, руб.*
+        tr.title.cp
+          td
+          td Раздел Проектные работы
+          td
+          td
+        tr
+          td 1
+          td Разработка генерального плана участка с элементами дендроплана**
+          td м2
+          td 500-800
+        tr.title.cp
+          td
+          td Раздел Благоустройство территории
+          td
+          td
+        tr.title2.cp
+          td
+          td Земельные работы
+          td
+          td
+        tr
+          td 1
+          td Работы по планировке участка
+          td 100 м2
+          td 3 350
+        tr.title2.cp
+          td
+          td Устройство дорожек и площадок
+          td
+          td
+        tr
+          td 1
+          td Укладка плитки (брусчатки) под ключ
+          td м2
+          td 1 660 + плитка (брусчатка)
+      span.description Примечание: *Все цены ориентировочные. Уточняются после анкетирования клиента и выезда специалист на участок. *** Стоимость проектирования рассчитывается от общей площади участка, включая строения. 
+    include commons/footer.jade
